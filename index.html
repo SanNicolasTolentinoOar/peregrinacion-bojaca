@@ -23,57 +23,66 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    font-size: 137.5%;   /* 1rem = 22px — base uniforme para todo el sitio */
+  }
 
   body {
     font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
     color: var(--texto);
     background: var(--crema);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(201,168,76,0.2);
   }
 
   /* ── HERO ── */
   .hero {
-    background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-medio) 50%, var(--azul-claro) 100%);
-    color: var(--texto-claro);
+    background: #ffffff;
+    color: var(--azul-oscuro);
     text-align: center;
-    padding: 3rem 1.5rem 2.5rem;
+    padding: 2rem 1.5rem 2rem;
     position: relative;
     overflow: hidden;
+    border-bottom: 3px solid var(--dorado);
   }
-  .hero::before {
-    content: '✝';
-    position: absolute;
-    top: -40px;
-    right: -20px;
-    font-size: 12rem;
-    opacity: 0.06;
-    color: var(--dorado);
+  .hero-img {
+    width: 140px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    margin-bottom: 1rem;
+    border: 3px solid var(--dorado);
   }
   .hero-icon { font-size: 3.5rem; margin-bottom: 0.5rem; }
   .hero h1 {
     font-family: 'Merriweather', serif;
-    font-size: 1.6rem;
+    font-size: 1.35rem;
     line-height: 1.3;
     margin-bottom: 0.3rem;
-    color: #fff;
+    color: var(--azul-oscuro);
   }
   .hero h2 {
     font-family: 'Merriweather', serif;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 400;
     font-style: italic;
-    color: var(--dorado-claro);
+    color: var(--azul-medio);
     margin-bottom: 1rem;
   }
   .hero-info {
-    background: rgba(255,255,255,0.1);
+    background: rgba(26,58,92,0.08);
     border-radius: 12px;
     padding: 0.8rem 1.2rem;
     display: inline-block;
     font-size: 0.9rem;
-    backdrop-filter: blur(4px);
+    color: var(--azul-oscuro);
   }
   .hero-info span { display: block; }
 
@@ -93,6 +102,8 @@
     padding: 0 1rem;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    mask-image: linear-gradient(to right, transparent, black 1rem, black calc(100% - 2rem), transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 1rem, black calc(100% - 2rem), transparent);
   }
   .nav-scroll::-webkit-scrollbar { display: none; }
   .nav-btn {
@@ -100,14 +111,18 @@
     background: rgba(255,255,255,0.1);
     color: var(--dorado-claro);
     border: 1px solid rgba(201,168,76,0.3);
-    padding: 0.45rem 0.9rem;
-    border-radius: 20px;
-    font-size: 0.78rem;
+    padding: 0.55rem 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    border-radius: 22px;
+    font-size: 0.75rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     text-decoration: none;
     white-space: nowrap;
     transition: all 0.2s;
+    touch-action: manipulation;
   }
   .nav-btn:hover, .nav-btn:active {
     background: var(--dorado);
@@ -124,18 +139,18 @@
 
   .section-title {
     font-family: 'Merriweather', serif;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: var(--azul-oscuro);
     margin-bottom: 1.2rem;
     display: flex;
     align-items: center;
     gap: 0.6rem;
   }
-  .section-title .icon { font-size: 1.6rem; }
+  .section-title .icon { font-size: 1.4rem; }
 
   .subsection-title {
     font-family: 'Merriweather', serif;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--azul-medio);
     margin: 1.5rem 0 0.8rem;
     padding-bottom: 0.3rem;
@@ -156,7 +171,7 @@
   }
   .card-title {
     font-family: 'Merriweather', serif;
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--azul-oscuro);
     margin-bottom: 0.5rem;
   }
@@ -176,7 +191,7 @@
     border-left: 4px solid var(--azul-claro);
     font-family: 'Merriweather', serif;
     font-style: italic;
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: #3a3a3a;
   }
@@ -207,7 +222,7 @@
     font-size: 1.05rem;
   }
   .prayer-text {
-    font-size: 0.92rem;
+    font-size: 1rem;
     line-height: 1.9;
     text-align: left;
   }
@@ -226,14 +241,16 @@
   }
   summary {
     padding: 1rem 1.3rem;
+    min-height: 48px;
     font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     color: var(--azul-oscuro);
-    font-size: 0.95rem;
+    font-size: 1rem;
     list-style: none;
+    touch-action: manipulation;
   }
   summary::-webkit-details-marker { display: none; }
   summary::after {
@@ -249,7 +266,7 @@
   }
   .accordion-body {
     padding: 0 1.3rem 1.3rem;
-    font-size: 0.92rem;
+    font-size: 1rem;
   }
 
   /* ── DOGMA BADGE ── */
@@ -257,7 +274,7 @@
     display: inline-block;
     background: var(--azul-oscuro);
     color: var(--dorado-claro);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 700;
     padding: 0.15rem 0.6rem;
     border-radius: 10px;
@@ -267,7 +284,7 @@
   /* ── SONG ── */
   .song-lyrics {
     white-space: pre-line;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: #444;
   }
@@ -287,10 +304,10 @@
   .curiosity-title {
     color: var(--dorado);
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     margin-bottom: 0.4rem;
   }
-  .curiosity p { color: #ddd; font-size: 0.9rem; }
+  .curiosity p { color: #ddd; font-size: 1rem; }
 
   /* ── FOOTER ── */
   .footer {
@@ -298,7 +315,7 @@
     color: rgba(255,255,255,0.7);
     text-align: center;
     padding: 2rem 1.5rem;
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     line-height: 1.7;
   }
   .footer strong { color: var(--dorado-claro); }
@@ -306,26 +323,43 @@
   /* ── BACK TO TOP ── */
   .top-btn {
     position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
     background: var(--azul-oscuro);
     color: var(--dorado);
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
     text-decoration: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.35);
     z-index: 99;
+    touch-action: manipulation;
   }
 
-  /* ── RESPONSIVE ── */
+  /* ── RESPONSIVE: pantallas pequeñas (≤ 380px) ── */
+  @media (max-width: 380px) {
+    html { font-size: 125%; }  /* 1rem = 20px en pantallas muy pequeñas */
+    .hero { padding: 1.5rem 1rem; }
+    .hero h1 { font-size: 1.2rem; }
+    .hero-img { width: 120px; }
+    .section { padding: 1.5rem 0.9rem; }
+    .card { padding: 1rem; }
+    .bible-quote { padding: 1rem; }
+    .prayer-box { padding: 1rem; }
+    .curiosity { padding: 1rem; }
+    summary { padding: 0.9rem 1rem; }
+    .accordion-body { padding: 0 1rem 1rem; }
+  }
+
+  /* ── RESPONSIVE: escritorio (≥ 600px) ── */
   @media (min-width: 600px) {
-    .hero h1 { font-size: 2rem; }
-    .hero h2 { font-size: 1.2rem; }
+    .hero h1 { font-size: 1.5rem; }
+    .hero h2 { font-size: 1.1rem; }
+    .hero-img { width: 180px; }
     .section { padding: 2.5rem 2rem; }
   }
 </style>
@@ -334,33 +368,107 @@
 
 <!-- ═══════════════════════════════════════ HERO ═══════════════════════════════════════ -->
 <header class="hero" id="inicio">
-  <div class="hero-icon">🕊️</div>
+  <img src="data:image/jpeg;base64,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" alt="Nuestra Señora de la Salud de Bojacá" class="hero-img">
   <h1>Peregrinación al Santuario de<br>Nuestra Señora de la Salud</h1>
   <h2>Virgen de Bojacá</h2>
   <div class="hero-info">
-    <span>📅 25 de julio de 2026 &nbsp;|&nbsp; 📍 Bojacá, Cundinamarca</span>
-    <span>🚌 9 buses &nbsp;|&nbsp; 👥 ~350 peregrinos</span>
+    <span>25 de julio de 2026 &nbsp;|&nbsp; Bojacá, Cundinamarca</span>
   </div>
 </header>
 
 <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
 <nav class="nav-bar">
   <div class="nav-scroll">
-    <a href="#por-que" class="nav-btn">🚶 Por qué peregrinamos</a>
-    <a href="#los-del-camino" class="nav-btn">🔥 Los del Camino</a>
-    <a href="#sinodalidad" class="nav-btn">🤝 Sinodalidad</a>
-    <a href="#textos" class="nav-btn">📖 Textos Bíblicos</a>
-    <a href="#dogmas" class="nav-btn">⭐ Dogmas Marianos</a>
-    <a href="#oraciones" class="nav-btn">🙏 Oraciones</a>
-    <a href="#cantos" class="nav-btn">🎵 Cantos</a>
-    <a href="#datos" class="nav-btn">💡 Datos Curiosos</a>
-    <a href="#santuario" class="nav-btn">⛪ El Santuario</a>
+    <a href="#guia" class="nav-btn">Guía de la Peregrinación</a>
+    <a href="#por-que" class="nav-btn">Por qué peregrinamos</a>
+    <a href="#los-del-camino" class="nav-btn">Los del Camino</a>
+    <a href="#sinodalidad" class="nav-btn">Sinodalidad</a>
+    <a href="#textos" class="nav-btn">Textos Bíblicos</a>
+    <a href="#dogmas" class="nav-btn">Dogmas Marianos</a>
+    <a href="#oraciones" class="nav-btn">Oraciones</a>
+    <a href="#cantos" class="nav-btn">Cantos</a>
+    <a href="#advocaciones" class="nav-btn">Advocaciones</a>
+    <a href="#datos" class="nav-btn">Datos Curiosos</a>
+    <a href="#santuario" class="nav-btn">El Santuario</a>
   </div>
 </nav>
 
+<!-- ═══════════════════════════════════════ GUÍA DE LA PEREGRINACIÓN ═══════════════════════════════════════ -->
+<section class="section" id="guia">
+  <h2 class="section-title">Guía de la Peregrinación</h2>
+
+  <div class="card">
+    <div class="card-title">Invocación inicial</div>
+    <p style="margin-bottom:0">Para iniciar nuestra peregrinación invocamos la presencia de Dios: Padre, Hijo y Espíritu Santo.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Ofrecimiento de la peregrinación</div>
+    <p style="margin-bottom:0">Intención particular y comunitaria.</p>
+  </div>
+
+  <div class="prayer-box">
+    <h3>El Ángelus</h3>
+    <div class="prayer-text">
+      <span class="prayer-response">V/</span> El ángel del Señor anunció a María<br>
+      <span class="prayer-response">R/</span> y concibió por obra y gracia del Espíritu Santo. Avemaría.<br><br>
+
+      <span class="prayer-response">V/</span> He aquí la esclava del Señor:<br>
+      <span class="prayer-response">R/</span> hágase en mí según tu palabra. Avemaría.<br><br>
+
+      <span class="prayer-response">V/</span> El Verbo de Dios se hizo carne:<br>
+      <span class="prayer-response">R/</span> y habitó entre nosotros. Avemaría.<br><br>
+
+      <span class="prayer-response">V/</span> Ruega por nosotros Santa María Madre de Dios y Madre nuestra:<br>
+      <span class="prayer-response">R/</span> ruega por nosotros Santa Madre de Dios para que alcancemos las promesas y gracias de Nuestro Señor Jesucristo. Amén.<br><br>
+
+      <strong>Oremos:</strong> Derrama Señor tu gracia sobre nosotros para que quienes hemos conocido por el anuncio del Ángel Gabriel, la Encarnación de tu Hijo y por la intercesión de la Santísima Virgen María alcancemos los gozos de la vida eterna. Amén.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Santo Rosario: Misterios Gozosos</div>
+    <p>Realizamos el Santo Rosario contemplando los misterios gozosos:</p>
+    <p><strong>1.</strong> Anuncio y Encarnación de Nuestro Señor Jesucristo.</p>
+    <p><strong>2.</strong> La Visita de la Santísima Virgen María a su prima santa Isabel.</p>
+    <p><strong>3.</strong> El nacimiento del Hijo de Dios en el portal de Belén.</p>
+    <p><strong>4.</strong> La Presentación del Niño Jesús en el templo y purificación de la Santísima Virgen.</p>
+    <p><strong>5.</strong> Pérdida y hallazgo de Nuestro Señor Jesucristo en el templo.</p>
+    <p style="margin-bottom:0"><em>Salve. Nota: se pueden entonar cánticos.</em></p>
+  </div>
+
+  <details>
+    <summary>Lectura: San Lucas 2, 22-24.41-52</summary>
+    <div class="accordion-body">
+      <div class="bible-quote">
+        «Cuando se cumplieron los días de la purificación de ellos, según la Ley de Moisés, llevaron a Jesús a Jerusalén para presentarle al Señor. Como está escrito en la Ley del Señor: Todo varón primogénito será consagrado al Señor y para ofrecer en sacrificio un par de tórtolas o dos pichones, conforme a lo que se dice en la Ley del Señor.
+
+Sus padres iban todos los años a Jerusalén a la fiesta de la Pascua. Cuando tuvo doce años, subieron ellos como de costumbre a la fiesta y, al volverse, pasados los días, el niño Jesús se quedó en Jerusalén, sin saberlo sus padres. Pero creyendo que estaría en la caravana, hicieron un día de camino, y le buscaban entre los parientes y conocidos; pero al no encontrarle, se volvieron a Jerusalén en su busca.
+
+Y sucedió que, al cabo de tres días, lo encontraron en el Templo sentado en medio de los maestros, escuchándolos y preguntándoles; todos los que lo escuchaban, estaban estupefactos por su inteligencia y sus respuestas.
+
+Cuando lo vieron, quedaron sorprendidos, y su madre le dijo: "Hijo, ¿por qué nos has hecho esto? Mira, tu padre y yo, estábamos angustiados, buscándote."
+
+El les dijo: "Y ¿por qué me buscaban? ¿No sabían que yo debía estar en la casa de mi Padre?"
+
+Pero ellos no comprendieron la respuesta que les dio. Bajó con ellos y vino a Nazaret, y vivía sujeto a ellos. Su madre conservaba cuidadosamente todas estas cosas en su corazón.»
+        <span class="bible-ref">— Palabra del Señor</span>
+      </div>
+    </div>
+  </details>
+
+  <div class="card">
+    <div class="card-title">Para reflexionar y compartir en pareja</div>
+    <p><strong>1.</strong> Desde este texto sagrado, ¿quién nos enseña a peregrinar? ¿Por qué?</p>
+    <p><strong>2.</strong> ¿Qué presentó la familia de Nazaret en el templo?</p>
+    <p><strong>3.</strong> ¿Qué puedo presentar hoy en el templo a mi Señor?</p>
+    <p style="margin-bottom:0"><strong>4.</strong> ¿Por qué es importante la fiesta de la Pascua para los católicos siendo que no somos judíos y los judíos iban a recordar y celebrar el paso de la esclavitud a la libertad?</p>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════════════ POR QUÉ PEREGRINAMOS ═══════════════════════════════════════ -->
 <section class="section" id="por-que">
-  <h2 class="section-title"><span class="icon">🚶</span> ¿Por qué peregrinamos?</h2>
+  <h2 class="section-title">¿Por qué peregrinamos?</h2>
 
   <p>La palabra <strong>peregrino</strong> viene del latín <em>per ager</em> (a través de los campos) o <em>per eger</em> (el que cruza fronteras). Desde los tiempos más antiguos, caminar hacia un lugar sagrado ha sido una forma de expresar la fe con todo el cuerpo, no solo con la mente o las palabras.</p>
 
@@ -382,7 +490,7 @@
 
 <!-- ═══════════════════════════════════════ LOS DEL CAMINO ═══════════════════════════════════════ -->
 <section class="section" id="los-del-camino">
-  <h2 class="section-title"><span class="icon">🔥</span> Los del Camino</h2>
+  <h2 class="section-title">Los del Camino</h2>
 
   <p>Antes de ser llamados «cristianos», los primeros seguidores de Jesús tenían otro nombre: <strong>los del Camino</strong>. Esta fue la primera designación que recibió la comunidad de creyentes en Cristo, y aparece varias veces en los Hechos de los Apóstoles.</p>
 
@@ -409,7 +517,7 @@
 
 <!-- ═══════════════════════════════════════ SINODALIDAD ═══════════════════════════════════════ -->
 <section class="section" id="sinodalidad">
-  <h2 class="section-title"><span class="icon">🤝</span> La Sinodalidad: Caminar Juntos</h2>
+  <h2 class="section-title">La Sinodalidad: Caminar Juntos</h2>
 
   <p>La palabra <strong>sinodalidad</strong> viene del griego <em>syn</em> (juntos) + <em>hodós</em> (camino). Literalmente significa <strong>«caminar juntos»</strong>. No es coincidencia que esta sea también la esencia de una peregrinación.</p>
 
@@ -444,12 +552,12 @@
 
 <!-- ═══════════════════════════════════════ TEXTOS BÍBLICOS ═══════════════════════════════════════ -->
 <section class="section" id="textos">
-  <h2 class="section-title"><span class="icon">📖</span> Textos Bíblicos Marianos</h2>
+  <h2 class="section-title">Textos Bíblicos Marianos</h2>
 
   <p>María aparece en momentos clave de la historia de la salvación. Estos son los textos bíblicos fundamentales que nos hablan de ella.</p>
 
   <details>
-    <summary>📜 La Anunciación (Lucas 1, 26-38)</summary>
+    <summary>La Anunciación (Lucas 1, 26-38)</summary>
     <div class="accordion-body">
       <div class="bible-quote">
         «Al sexto mes, el ángel Gabriel fue enviado por Dios a una ciudad de Galilea llamada Nazaret, a una virgen desposada con un hombre llamado José, de la casa de David; el nombre de la virgen era María.
@@ -472,7 +580,7 @@ María dijo: "He aquí la esclava del Señor; hágase en mí según tu palabra."
   </details>
 
   <details>
-    <summary>📜 La Visitación (Lucas 1, 39-45)</summary>
+    <summary>La Visitación (Lucas 1, 39-45)</summary>
     <div class="accordion-body">
       <div class="bible-quote">
         «En aquellos días, María se levantó y fue con prontitud a la región montañosa, a una ciudad de Judá. Entró en casa de Zacarías y saludó a Isabel.
@@ -487,7 +595,7 @@ Cuando Isabel oyó el saludo de María, el niño saltó en su seno, e Isabel, ll
   </details>
 
   <details>
-    <summary>📜 El Magnificat (Lucas 1, 46-55)</summary>
+    <summary>El Magnificat (Lucas 1, 46-55)</summary>
     <div class="accordion-body">
       <div class="bible-quote">
         «Proclama mi alma la grandeza del Señor,
@@ -518,7 +626,7 @@ en favor de Abraham y su descendencia por siempre.»
   </details>
 
   <details>
-    <summary>📜 Las Bodas de Caná (Juan 2, 1-11)</summary>
+    <summary>Las Bodas de Caná (Juan 2, 1-11)</summary>
     <div class="accordion-body">
       <div class="bible-quote">
         «Al tercer día se celebraron unas bodas en Caná de Galilea, y la madre de Jesús estaba allí. También fueron invitados Jesús y sus discípulos.
@@ -539,7 +647,7 @@ Cuando el maestresala probó el agua convertida en vino, llamó al esposo y le d
   </details>
 
   <details>
-    <summary>📜 María al pie de la Cruz (Juan 19, 25-27)</summary>
+    <summary>María al pie de la Cruz (Juan 19, 25-27)</summary>
     <div class="accordion-body">
       <div class="bible-quote">
         «Junto a la cruz de Jesús estaban su madre, la hermana de su madre María la de Cleofás, y María Magdalena.
@@ -556,7 +664,7 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
   </details>
 
   <details>
-    <summary>📜 María en Pentecostés (Hechos 1, 14)</summary>
+    <summary>María en Pentecostés (Hechos 1, 14)</summary>
     <div class="accordion-body">
       <div class="bible-quote">
         «Todos ellos perseveraban unánimes en la oración, junto con algunas mujeres, con María, la madre de Jesús, y con los hermanos de Jesús.»
@@ -567,7 +675,7 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
   </details>
 
   <details>
-    <summary>📜 La Mujer vestida de sol (Apocalipsis 12, 1)</summary>
+    <summary>La Mujer vestida de sol (Apocalipsis 12, 1)</summary>
     <div class="accordion-body">
       <div class="bible-quote">
         «Apareció en el cielo una gran señal: una mujer vestida del sol, con la luna bajo sus pies y sobre su cabeza una corona de doce estrellas.»
@@ -578,7 +686,7 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
   </details>
 
   <details>
-    <summary>📜 La profecía de Isaías (Isaías 7, 14)</summary>
+    <summary>La profecía de Isaías (Isaías 7, 14)</summary>
     <div class="accordion-body">
       <div class="bible-quote">
         «Por tanto, el Señor mismo os dará una señal: He aquí que la virgen concebirá y dará a luz un hijo, y le pondrá por nombre Emmanuel, que significa "Dios con nosotros."»
@@ -589,7 +697,7 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
   </details>
 
   <details>
-    <summary>📜 El Protoevangelio (Génesis 3, 15)</summary>
+    <summary>El Protoevangelio (Génesis 3, 15)</summary>
     <div class="accordion-body">
       <div class="bible-quote">
         «Pondré enemistad entre ti y la mujer, entre tu descendencia y la suya; ella te aplastará la cabeza mientras tú le acecharás el talón.»
@@ -602,7 +710,7 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
 
 <!-- ═══════════════════════════════════════ DOGMAS MARIANOS ═══════════════════════════════════════ -->
 <section class="section" id="dogmas">
-  <h2 class="section-title"><span class="icon">⭐</span> Los 4 Dogmas Marianos</h2>
+  <h2 class="section-title">Los 4 Dogmas Marianos</h2>
 
   <p>Un <strong>dogma</strong> es una verdad de fe que la Iglesia declara como revelada por Dios y que todos los fieles deben creer. Sobre María, la Iglesia ha proclamado cuatro dogmas a lo largo de su historia.</p>
 
@@ -669,7 +777,7 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
 
 <!-- ═══════════════════════════════════════ ORACIONES ═══════════════════════════════════════ -->
 <section class="section" id="oraciones">
-  <h2 class="section-title"><span class="icon">🙏</span> Oraciones</h2>
+  <h2 class="section-title">Oraciones</h2>
 
   <div class="prayer-box">
     <h3>Ave María</h3>
@@ -737,7 +845,7 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
   </div>
 
   <details>
-    <summary>🙏 Oración del Peregrino</summary>
+    <summary>Oración del Peregrino</summary>
     <div class="accordion-body">
       <div class="prayer-text" style="text-align:center">
         Señor Jesús, que caminaste por los senderos de esta tierra<br>
@@ -760,7 +868,7 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
   </details>
 
   <details>
-    <summary>🙏 Consagración a la Virgen María</summary>
+    <summary>Consagración a la Virgen María</summary>
     <div class="accordion-body">
       <div class="prayer-text" style="text-align:center">
         Oh Señora mía, oh Madre mía,<br>
@@ -778,7 +886,7 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
   </details>
 
   <details>
-    <summary>📿 Cómo rezar el Santo Rosario</summary>
+    <summary>Cómo rezar el Santo Rosario</summary>
     <div class="accordion-body">
       <p>El Rosario se compone de <strong>5 decenas</strong>, cada una con un Padre Nuestro, 10 Ave Marías y un Gloria al Padre, meditando un misterio de la vida de Jesús y María.</p>
 
@@ -793,7 +901,50 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
   </details>
 
   <details>
-    <summary>📿 Letanías Lauretanas (selección)</summary>
+    <summary>Coronilla de la Divina Misericordia</summary>
+    <div class="accordion-body">
+      <p>Se reza con las cuentas del Rosario. Jesús dictó esta oración a Santa Faustina Kowalska en 1935, prometiendo grandes gracias a quienes la recen con confianza.</p>
+
+      <div class="prayer-text" style="text-align:center">
+        <strong>Inicio (en las cuentas del Padre Nuestro, Avemaría y Credo):</strong><br><br>
+        Padre Nuestro, Avemaría, Credo.<br><br>
+
+        <strong>En las cuentas grandes (antes de cada decena):</strong><br><br>
+        Padre Eterno, te ofrezco el Cuerpo y la Sangre,<br>
+        el Alma y la Divinidad<br>
+        de tu amadísimo Hijo,<br>
+        Nuestro Señor Jesucristo,<br>
+        como propiciación de nuestros pecados<br>
+        y los del mundo entero.<br><br>
+
+        <strong>En las cuentas pequeñas (10 veces por decena):</strong><br><br>
+        Por su dolorosa Pasión,<br>
+        ten misericordia de nosotros<br>
+        y del mundo entero.<br><br>
+
+        <em>(Se repiten las 5 decenas)</em><br><br>
+
+        <strong>Al final (se repite 3 veces):</strong><br><br>
+        Santo Dios, Santo Fuerte, Santo Inmortal,<br>
+        ten piedad de nosotros y del mundo entero.<br><br>
+
+        <strong>Oración final:</strong><br><br>
+        Oh Dios Eterno, en quien la misericordia es infinita<br>
+        y el tesoro de compasión inagotable,<br>
+        vuelve a nosotros tu mirada bondadosa<br>
+        y aumenta tu misericordia en nosotros,<br>
+        para que en momentos difíciles no nos desesperemos<br>
+        ni nos desalentemos,<br>
+        sino que, con gran confianza,<br>
+        nos sometamos a tu santa voluntad,<br>
+        que es el Amor y la Misericordia misma.<br>
+        Amén.
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Letanías Lauretanas (selección)</summary>
     <div class="accordion-body">
       <div class="prayer-text">
         Señor, ten piedad. <span class="prayer-response">Señor, ten piedad.</span><br>
@@ -822,12 +973,12 @@ Y desde aquella hora, el discípulo la recibió en su casa.»
 
 <!-- ═══════════════════════════════════════ CANTOS ═══════════════════════════════════════ -->
 <section class="section" id="cantos">
-  <h2 class="section-title"><span class="icon">🎵</span> Cantos Marianos</h2>
+  <h2 class="section-title">Cantos Marianos</h2>
 
   <p>Cantos tradicionales del repertorio católico latinoamericano para acompañar la peregrinación. Las letras aquí incluidas pertenecen al cancionero litúrgico popular.</p>
 
   <details>
-    <summary>🎶 Juntos como hermanos</summary>
+    <summary>Juntos como hermanos</summary>
     <div class="accordion-body">
       <div class="song-lyrics"><span class="song-chorus">Juntos como hermanos,
 miembros de una Iglesia,
@@ -852,7 +1003,7 @@ al calor del amor de Dios.
   </details>
 
   <details>
-    <summary>🎶 Santa María del Camino</summary>
+    <summary>Santa María del Camino</summary>
     <div class="accordion-body">
       <div class="song-lyrics">Mientras recorres la vida,
 tú nunca solo estás;
@@ -882,7 +1033,7 @@ porque Dios nos da su amor.
   </details>
 
   <details>
-    <summary>🎶 Madre del Camino</summary>
+    <summary>Madre del Camino</summary>
     <div class="accordion-body">
       <div class="song-lyrics"><span class="song-chorus">Madre del Camino, peregrina de la fe,
 tú nos guías y acompañas, nuestros pasos al andar.
@@ -900,7 +1051,7 @@ para llegar a los pies de tu Señor.
   </details>
 
   <details>
-    <summary>🎶 Oh María, Madre mía</summary>
+    <summary>Oh María, Madre mía</summary>
     <div class="accordion-body">
       <div class="song-lyrics"><span class="song-chorus">Oh María, Madre mía,
 oh consuelo del mortal,
@@ -925,7 +1076,7 @@ que su auxilio le faltó.
   </details>
 
   <details>
-    <summary>🎶 Dios te salve, María</summary>
+    <summary>Dios te salve, María</summary>
     <div class="accordion-body">
       <div class="song-lyrics"><span class="song-chorus">Dios te salve, María,
 llena eres de gracia,
@@ -950,7 +1101,7 @@ que vino a darnos luz.
   </details>
 
   <details>
-    <summary>🎶 El Peregrino de Emaús (Canto de camino)</summary>
+    <summary>El Peregrino de Emaús (Canto de camino)</summary>
     <div class="accordion-body">
       <div class="song-lyrics"><span class="song-chorus">Quédate con nosotros, Señor,
 que la tarde está cayendo.
@@ -975,64 +1126,126 @@ era el Señor resucitado.
   </details>
 </section>
 
+<!-- ═══════════════════════════════════════ ADVOCACIONES MARIANAS ═══════════════════════════════════════ -->
+<section class="section" id="advocaciones">
+  <h2 class="section-title">Advocaciones de la Virgen María</h2>
+
+  <p>A lo largo de los siglos, la Iglesia ha venerado a María bajo distintas advocaciones, cada una ligada a una aparición, un lugar o un aspecto de su maternidad espiritual. Estas son algunas de las más significativas.</p>
+
+  <div class="card">
+    <div class="card-title">Nuestra Señora de la Salud de Bojacá</div>
+    <p style="margin-bottom:0">Advocación colombiana venerada en el municipio de Bojacá, Cundinamarca. La imagen, un lienzo de la Virgen de los Dolores traído desde Granada (España) hacia 1739, es centro de peregrinaciones por los numerosos favores de salud atribuidos a su intercesión. Es la patrona de nuestro santuario y el destino de esta peregrinación.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Nuestra Señora de Guadalupe</div>
+    <p style="margin-bottom:0">Aparición ocurrida en el cerro del Tepeyac, México, en diciembre de 1531. La Virgen se manifestó al indígena Juan Diego y dejó su imagen impresa en su tilma (manto). Es patrona de América Latina y su fiesta se celebra el 12 de diciembre. La imagen original se conserva en la Basílica de Guadalupe en Ciudad de México, el santuario mariano más visitado del mundo.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Nuestra Señora de Fátima</div>
+    <p style="margin-bottom:0">En 1917, la Virgen se apareció a tres pastorcitos (Lucía, Francisco y Jacinta) en Fátima, Portugal, durante seis meses consecutivos. Les confió tres secretos y pidió la oración del Rosario y la consagración de Rusia a su Inmaculado Corazón. Su fiesta es el 13 de mayo.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Nuestra Señora de Lourdes</div>
+    <p style="margin-bottom:0">En 1858, la Virgen se apareció 18 veces a Bernadette Soubirous en la gruta de Massabielle, Lourdes, Francia. Se identificó como «la Inmaculada Concepción». De la gruta brotó una fuente de agua a la que se atribuyen numerosas curaciones milagrosas. Se celebra el 11 de febrero.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Inmaculada Concepción</div>
+    <p style="margin-bottom:0">Advocación que honra la concepción de María sin pecado original, dogma proclamado por el Papa Pío IX en 1854. Es patrona de varios países, incluyendo Estados Unidos y Argentina. Su fiesta es el 8 de diciembre, una de las solemnidades marianas más importantes del calendario litúrgico.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Nuestra Señora del Carmen</div>
+    <p style="margin-bottom:0">Advocación originada en el Monte Carmelo, Tierra Santa, donde los carmelitas la veneraban como patrona. Según la tradición, la Virgen entregó el escapulario a San Simón Stock en 1251 con la promesa de protección especial. Es patrona del Ejército de Colombia y su fiesta es el 16 de julio.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Nuestra Señora del Rosario</div>
+    <p style="margin-bottom:0">Advocación que celebra la oración del Santo Rosario, la forma de meditación mariana más extendida en la Iglesia católica. Según la tradición, la Virgen entregó el Rosario a Santo Domingo de Guzmán en el siglo XIII. Su fiesta es el 7 de octubre, instituida por el Papa Pío V tras la batalla de Lepanto (1571).</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Nuestra Señora de Chiquinquirá</div>
+    <p style="margin-bottom:0">Patrona de Colombia. La imagen, pintada en 1555, se deterioró gravemente hasta que en 1586 fue restaurada milagrosamente ante los ojos de María Ramos, una mujer piadosa de Chiquinquirá, Boyacá. Es la advocación mariana más venerada de Colombia y su fiesta se celebra el 9 de julio.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Nuestra Señora de la Medalla Milagrosa</div>
+    <p style="margin-bottom:0">En 1830, la Virgen se apareció a Santa Catalina Labouré en París y le pidió que mandara acuñar una medalla con la inscripción «Oh María, sin pecado concebida, ruega por nosotros que recurrimos a ti». Las gracias obtenidas por quienes la portaban hicieron que el pueblo la llamara «milagrosa». Su fiesta es el 27 de noviembre.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Nuestra Señora de los Dolores</div>
+    <p style="margin-bottom:0">Advocación que contempla los sufrimientos de María a lo largo de su vida, especialmente los siete dolores: la profecía de Simeón, la huida a Egipto, la pérdida de Jesús en el Templo, el encuentro camino al Calvario, la crucifixión, el descendimiento de la cruz y la sepultura. Se celebra el 15 de septiembre.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Nuestra Señora de la Candelaria</div>
+    <p style="margin-bottom:0">Advocación que recuerda la Presentación de Jesús en el Templo, cuando María llevó cirios (candelas) como ofrenda. Es patrona de las Islas Canarias y muy venerada en América Latina, especialmente en Puno (Perú), Cartagena (Colombia) y Copacabana (Bolivia). Su fiesta es el 2 de febrero.</p>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════════════ DATOS CURIOSOS ═══════════════════════════════════════ -->
 <section class="section" id="datos">
-  <h2 class="section-title"><span class="icon">💡</span> Datos Curiosos</h2>
+  <h2 class="section-title">Datos Curiosos</h2>
 
   <div class="curiosity">
-    <div class="curiosity-title">🏛️ «La Roma Chiquita»</div>
+    <div class="curiosity-title">«La Roma Chiquita»</div>
     <p>Bojacá fue apodada «la Roma Chiquita» por la intensidad de su devoción mariana y la multitud de fieles que visitan el santuario diariamente buscando salud, protección y favores espirituales.</p>
   </div>
 
   <div class="curiosity">
-    <div class="curiosity-title">🖼️ Un lienzo que llegó de Granada</div>
+    <div class="curiosity-title">Un lienzo que llegó de Granada</div>
     <p>La imagen venerada es un lienzo (pintura sobre tela) de la Virgen de los Dolores, traído desde Granada (España) por José Pérez, un devoto español que vivía cerca de las piedras de Chivo Negro en Bojacá. Llegó alrededor de 1739 y fue instalada inicialmente en su capilla privada.</p>
   </div>
 
   <div class="curiosity">
-    <div class="curiosity-title">🕯️ De capilla familiar a santuario nacional</div>
+    <div class="curiosity-title">De capilla familiar a santuario nacional</div>
     <p>Cuando José Pérez falleció en 1757, la imagen fue transferida a la iglesia parroquial por el padre Francisco de Cárdenas, quien organizó una solemne procesión. Desde entonces, la devoción creció hasta convertir a Bojacá en uno de los centros de peregrinación más importantes de Colombia.</p>
   </div>
 
   <div class="curiosity">
-    <div class="curiosity-title">🙌 Exvotos de cera: manos, ojos, piernas</div>
+    <div class="curiosity-title">Exvotos de cera: manos, ojos, piernas</div>
     <p>Los devotos dejan figuras de cera en forma de manos, ojos, piernas y cuerpos completos como testimonio de los favores recibidos. Esta tradición de «exvotos» viene de la época colonial y sigue viva hasta hoy. Es la forma que tienen los peregrinos de decir: «la Virgen me sanó».</p>
   </div>
 
   <div class="curiosity">
-    <div class="curiosity-title">🚗 Bendición de vehículos</div>
+    <div class="curiosity-title">Bendición de vehículos</div>
     <p>Una de las tradiciones más populares del santuario es la bendición de vehículos. Miles de conductores llevan sus carros, motos y camiones cada fin de semana para que sean bendecidos frente al templo, pidiendo protección en las carreteras.</p>
   </div>
 
   <div class="curiosity">
-    <div class="curiosity-title">📅 Fiesta patronal: segundo domingo de septiembre</div>
+    <div class="curiosity-title">Fiesta patronal: segundo domingo de septiembre</div>
     <p>La fiesta de Nuestra Señora de la Salud de Bojacá se celebra el segundo domingo de septiembre, fecha establecida por el párroco Fray Hilarión García en 1922 por ser la más cercana a la fiesta de los Dolores de María. El lunes siguiente es la fiesta patronal del municipio.</p>
   </div>
 
   <div class="curiosity">
-    <div class="curiosity-title">⛪ Los Padres Agustinos</div>
+    <div class="curiosity-title">Los Padres Agustinos</div>
     <p>El santuario está administrado por los Padres Agustinos desde hace más de un siglo, a través de la Parroquia San Lorenzo Mártir. La orden agustiniana, fundada por San Agustín de Hipona, tiene una larga tradición de devoción mariana.</p>
   </div>
 
   <div class="curiosity">
-    <div class="curiosity-title">🌟 Fray Eliseo de Álava y el Hermano Higinio</div>
+    <div class="curiosity-title">Fray Eliseo de Álava y el Hermano Higinio</div>
     <p>Dos figuras clave en la difusión de la devoción: Fray Eliseo de Álava, quien desde 1946 impulsó la ampliación del santuario; y el Hermano Higinio Hernández (fallecido en 1978), quien recorrió incansablemente Cundinamarca y departamentos vecinos promoviendo la devoción a la Virgen de Bojacá.</p>
   </div>
 
   <div class="curiosity">
-    <div class="curiosity-title">💚 Conversiones de 70 años</div>
+    <div class="curiosity-title">Conversiones de 70 años</div>
     <p>Las crónicas del santuario registran testimonios de personas que habían pasado más de 70 años alejadas de Dios y que, al peregrinar a Bojacá, experimentaron una profunda conversión espiritual. Para muchos, el camino hacia el santuario fue también un camino de vuelta a la fe.</p>
   </div>
 
   <div class="curiosity">
-    <div class="curiosity-title">📍 Solo 40 km de Bogotá</div>
+    <div class="curiosity-title">Solo 40 km de Bogotá</div>
     <p>Bojacá se encuentra a solo 40 kilómetros al occidente de Bogotá, sobre la vía que conduce a Facatativá. El municipio pertenece a la Provincia de Sabana Occidente en Cundinamarca. Su cercanía a la capital lo convierte en uno de los destinos de peregrinación más accesibles del país.</p>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════ EL SANTUARIO ═══════════════════════════════════════ -->
 <section class="section" id="santuario">
-  <h2 class="section-title"><span class="icon">⛪</span> El Santuario</h2>
+  <h2 class="section-title">El Santuario</h2>
 
   <div class="card">
     <div class="card-title">Santuario de Nuestra Señora de la Salud</div>
@@ -1052,7 +1265,7 @@ era el Señor resucitado.
 
 <!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
 <footer class="footer">
-  <p>🕊️ <strong>Peregrinación a la Virgen de Bojacá 2026</strong></p>
+  <p><strong>Peregrinación a la Virgen de Bojacá 2026</strong></p>
   <p>«Haced lo que Él os diga» — Juan 2, 5</p>
   <p style="margin-top:1rem; font-size:0.75rem; opacity:0.7;">Contenido recopilado con fines pastorales y devocionales.<br>
   Los textos bíblicos siguen la traducción de la Biblia de Jerusalén.<br>
