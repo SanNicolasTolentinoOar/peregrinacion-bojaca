@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peregrinación Virgen de Bojacá 2026</title>
+<meta name="description" content="Guía devocional para la Peregrinación al Santuario de Nuestra Señora de la Salud de Bojacá - 25 de julio de 2026">
+<meta name="theme-color" content="#1a3a5c">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap');
+
+  :root {
+    --azul-oscuro: #1a3a5c;
+    --azul-medio: #2c5f8a;
+    --azul-claro: #4a90c4;
+    --dorado: #c9a84c;
+    --dorado-claro: #e8d59a;
+    --crema: #faf6ee;
+    --texto: #2d2d2d;
+    --texto-claro: #f5f0e6;
+    --borde: #d4c9a8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--texto);
+    background: var(--crema);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-medio) 50%, var(--azul-claro) 100%);
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 3rem 1.5rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '✝';
+    position: absolute;
+    top: -40px;
+    right: -20px;
+    font-size: 12rem;
+    opacity: 0.06;
+    color: var(--dorado);
+  }
+  .hero-icon { font-size: 3.5rem; margin-bottom: 0.5rem; }
+  .hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+    color: #fff;
+  }
+  .hero h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--dorado-claro);
+    margin-bottom: 1rem;
+  }
+  .hero-info {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 0.8rem 1.2rem;
+    display: inline-block;
+    font-size: 0.9rem;
+    backdrop-filter: blur(4px);
+  }
+  .hero-info span { display: block; }
+
+  /* ── NAV ── */
+  .nav-bar {
+    background: var(--azul-oscuro);
+    padding: 0.6rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .nav-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.4rem;
+    padding: 0 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-scroll::-webkit-scrollbar { display: none; }
+  .nav-btn {
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.1);
+    color: var(--dorado-claro);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 0.45rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .nav-btn:hover, .nav-btn:active {
+    background: var(--dorado);
+    color: var(--azul-oscuro);
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1.2rem;
+  }
+  .section + .section { border-top: 1px solid var(--borde); }
+
+  .section-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.35rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .section-title .icon { font-size: 1.6rem; }
+
+  .subsection-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    color: var(--azul-medio);
+    margin: 1.5rem 0 0.8rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--dorado-claro);
+    display: inline-block;
+  }
+
+  p { margin-bottom: 1rem; }
+
+  /* ── CARDS ── */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.3rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--dorado);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .card-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 0.5rem;
+  }
+  .card-meta {
+    font-size: 0.8rem;
+    color: var(--azul-claro);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── BIBLE QUOTE ── */
+  .bible-quote {
+    background: linear-gradient(135deg, #fff9ed, #fff);
+    border-radius: 12px;
+    padding: 1.3rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--azul-claro);
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #3a3a3a;
+  }
+  .bible-ref {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-size: 0.8rem;
+    color: var(--azul-medio);
+    font-weight: 700;
+    margin-top: 0.6rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* ── PRAYER ── */
+  .prayer-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--borde);
+    text-align: center;
+  }
+  .prayer-box h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--azul-oscuro);
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+  }
+  .prayer-text {
+    font-size: 0.92rem;
+    line-height: 1.9;
+    text-align: left;
+  }
+  .prayer-response {
+    font-weight: 700;
+    color: var(--azul-medio);
+  }
+
+  /* ── ACCORDION ── */
+  details {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    border: 1px solid var(--borde);
+    overflow: hidden;
+  }
+  summary {
+    padding: 1rem 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--azul-oscuro);
+    font-size: 0.95rem;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+';
+    margin-left: auto;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--dorado);
+    transition: transform 0.2s;
+  }
+  details[open] summary::after {
+    content: '−';
+  }
+  .accordion-body {
+    padding: 0 1.3rem 1.3rem;
+    font-size: 0.92rem;
+  }
+
+  /* ── DOGMA BADGE ── */
+  .dogma-year {
+    display: inline-block;
+    background: var(--azul-oscuro);
+    color: var(--dorado-claro);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.15rem 0.6rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── SONG ── */
+  .song-lyrics {
+    white-space: pre-line;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #444;
+  }
+  .song-chorus {
+    font-weight: 600;
+    color: var(--azul-medio);
+  }
+
+  /* ── CURIOSITY ── */
+  .curiosity {
+    background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-medio));
+    color: var(--texto-claro);
+    border-radius: 12px;
+    padding: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .curiosity-title {
+    color: var(--dorado);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+  .curiosity p { color: #ddd; font-size: 0.9rem; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--azul-oscuro);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+  .footer strong { color: var(--dorado-claro); }
+
+  /* ── BACK TO TOP ── */
+  .top-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: var(--azul-oscuro);
+    color: var(--dorado);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 99;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (min-width: 600px) {
+    .hero h1 { font-size: 2rem; }
+    .hero h2 { font-size: 1.2rem; }
+    .section { padding: 2.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ HERO ═══════════════════════════════════════ -->
+<header class="hero" id="inicio">
+  <div class="hero-icon">🕊️</div>
+  <h1>Peregrinación al Santuario de<br>Nuestra Señora de la Salud</h1>
+  <h2>Virgen de Bojacá</h2>
+  <div class="hero-info">
+    <span>📅 25 de julio de 2026 &nbsp;|&nbsp; 📍 Bojacá, Cundinamarca</span>
+    <span>🚌 9 buses &nbsp;|&nbsp; 👥 ~350 peregrinos</span>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+<nav class="nav-bar">
+  <div class="nav-scroll">
+    <a href="#por-que" class="nav-btn">🚶 Por qué peregrinamos</a>
+    <a href="#los-del-camino" class="nav-btn">🔥 Los del Camino</a>
+    <a href="#sinodalidad" class="nav-btn">🤝 Sinodalidad</a>
+    <a href="#textos" class="nav-btn">📖 Textos Bíblicos</a>
+    <a href="#dogmas" class="nav-btn">⭐ Dogmas Marianos</a>
+    <a href="#oraciones" class="nav-btn">🙏 Oraciones</a>
+    <a href="#cantos" class="nav-btn">🎵 Cantos</a>
+    <a href="#datos" class="nav-btn">💡 Datos Curiosos</a>
+    <a href="#santuario" class="nav-btn">⛪ El Santuario</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════ POR QUÉ PEREGRINAMOS ═══════════════════════════════════════ -->
+<section class="section" id="por-que">
+  <h2 class="section-title"><span class="icon">🚶</span> ¿Por qué peregrinamos?</h2>
+
+  <p>La palabra <strong>peregrino</strong> viene del latín <em>per ager</em> (a través de los campos) o <em>per eger</em> (el que cruza fronteras). Desde los tiempos más antiguos, caminar hacia un lugar sagrado ha sido una forma de expresar la fe con todo el cuerpo, no solo con la mente o las palabras.</p>
+
+  <div class="bible-quote">
+    «Vete de tu tierra, de tu parentela y de la casa de tu padre, a la tierra que yo te mostraré.»
+    <span class="bible-ref">— Génesis 12, 1</span>
+  </div>
+
+  <p>Abraham fue el primer gran peregrino de la Biblia. Dios lo llamó a dejar todo lo conocido y caminar hacia una tierra prometida. Ese gesto de confianza y salida se repite cada vez que un peregrino se pone en camino: dejamos la comodidad del hogar para ir al encuentro con Dios.</p>
+
+  <p>El pueblo de Israel peregrinó 40 años por el desierto hacia la Tierra Prometida. Jesús mismo fue un peregrino: caminó de Galilea a Jerusalén, y llamó a sus discípulos a seguirlo por el camino.</p>
+
+  <div class="card">
+    <div class="card-title">¿Qué pasa cuando peregrinamos?</div>
+    <p>Cuando caminamos, no solo cambiamos de lugar: <strong>nos transformamos</strong>. La peregrinación es una imagen viva de nuestra vida cristiana: somos pueblo en camino hacia la casa del Padre. Cada paso es un acto de fe, cada kilómetro una oración hecha con los pies.</p>
+    <p style="margin-bottom:0">Hoy, al ir juntos hacia el Santuario de la Virgen de Bojacá, hacemos lo mismo que hicieron Abraham, Moisés, los discípulos de Emaús y millones de cristianos durante 2000 años: <strong>caminar con fe hacia el encuentro con Dios</strong>.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ LOS DEL CAMINO ═══════════════════════════════════════ -->
+<section class="section" id="los-del-camino">
+  <h2 class="section-title"><span class="icon">🔥</span> Los del Camino</h2>
+
+  <p>Antes de ser llamados «cristianos», los primeros seguidores de Jesús tenían otro nombre: <strong>los del Camino</strong>. Esta fue la primera designación que recibió la comunidad de creyentes en Cristo, y aparece varias veces en los Hechos de los Apóstoles.</p>
+
+  <div class="bible-quote">
+    «Saulo pidió al sumo sacerdote cartas para las sinagogas de Damasco, a fin de que, si hallaba algunos hombres o mujeres del <strong>Camino</strong>, los trajese presos a Jerusalén.»
+    <span class="bible-ref">— Hechos 9, 2</span>
+  </div>
+
+  <div class="bible-quote">
+    «Yo confieso que, según el <strong>Camino</strong> que ellos llaman secta, así sirvo al Dios de mis padres.»
+    <span class="bible-ref">— Hechos 24, 14 (Pablo ante el gobernador Félix)</span>
+  </div>
+
+  <p>¿Por qué «el Camino»? Porque Jesús mismo dijo: <em>«Yo soy el Camino, la Verdad y la Vida»</em> (Juan 14, 6). Seguir a Cristo no era solo creer unas ideas: era adoptar un estilo de vida, una forma de caminar por el mundo. Los del Camino se distinguían por su compasión con los enfermos, su generosidad con los pobres y su valentía para anunciar el Evangelio.</p>
+
+  <div class="card">
+    <div class="card-title">De «los del Camino» a «cristianos»</div>
+    <p>Fue en Antioquía, hacia el año 47 d.C., donde los discípulos recibieron por primera vez el nombre de «cristianos» (Hechos 11, 26). El cambio de nombre no fue casual: la vida de esos creyentes reflejaba tanto a Cristo que la gente empezó a identificarlos con Él.</p>
+    <p style="margin-bottom:0">Hoy, como peregrinos hacia Bojacá, somos <strong>los del Camino</strong>: personas que caminan juntas siguiendo a Jesús, con María como compañera y guía.</p>
+  </div>
+
+  <p><strong>Otras menciones en Hechos:</strong> Hch 19, 9 · Hch 19, 23 · Hch 22, 4 · Hch 24, 22.</p>
+</section>
+
+<!-- ═══════════════════════════════════════ SINODALIDAD ═══════════════════════════════════════ -->
+<section class="section" id="sinodalidad">
+  <h2 class="section-title"><span class="icon">🤝</span> La Sinodalidad: Caminar Juntos</h2>
+
+  <p>La palabra <strong>sinodalidad</strong> viene del griego <em>syn</em> (juntos) + <em>hodós</em> (camino). Literalmente significa <strong>«caminar juntos»</strong>. No es coincidencia que esta sea también la esencia de una peregrinación.</p>
+
+  <div class="bible-quote">
+    «Donde están dos o tres reunidos en mi nombre, allí estoy yo en medio de ellos.»
+    <span class="bible-ref">— Mateo 18, 20</span>
+  </div>
+
+  <p>El Papa Francisco ha dicho que la sinodalidad «expresa la naturaleza de la Iglesia, su forma, su estilo, su misión» y que el camino sinodal es «el que Dios espera de la Iglesia del tercer milenio». No se trata de una moda ni de una estrategia: es la forma en que Jesús quiso que viviéramos la fe — juntos, escuchándonos, caminando unos con otros.</p>
+
+  <div class="card">
+    <div class="card-title">¿Qué tiene que ver con nuestra peregrinación?</div>
+    <p>Hoy somos 350 personas en 9 buses. No peregrinamos solos. Cada bus es una pequeña comunidad; todos juntos somos Iglesia en camino. La sinodalidad se vive así: en el diálogo fraterno, en la oración compartida, en ayudar al que va cansado, en cantar juntos, en escucharnos unos a otros.</p>
+    <p style="margin-bottom:0">Como dice el Papa Francisco: <em>«Una Iglesia sinodal es una Iglesia de la escucha, donde cada uno tiene algo que aprender.»</em></p>
+  </div>
+
+  <h3 class="subsection-title">Tres pilares de la sinodalidad</h3>
+
+  <div class="card">
+    <div class="card-title">1. Comunión</div>
+    <p style="margin-bottom:0">Estamos unidos por el mismo bautismo, la misma fe y el mismo destino. Somos un solo cuerpo, el Cuerpo de Cristo.</p>
+  </div>
+  <div class="card">
+    <div class="card-title">2. Participación</div>
+    <p style="margin-bottom:0">Todos tenemos algo que aportar. No hay miembros pasivos en la Iglesia. Cada bautizado tiene una misión.</p>
+  </div>
+  <div class="card">
+    <div class="card-title">3. Misión</div>
+    <p style="margin-bottom:0">Caminamos juntos no para quedarnos entre nosotros, sino para llevar el Evangelio al mundo. La peregrinación nos envía de vuelta a nuestras familias y comunidades renovados en la fe.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ TEXTOS BÍBLICOS ═══════════════════════════════════════ -->
+<section class="section" id="textos">
+  <h2 class="section-title"><span class="icon">📖</span> Textos Bíblicos Marianos</h2>
+
+  <p>María aparece en momentos clave de la historia de la salvación. Estos son los textos bíblicos fundamentales que nos hablan de ella.</p>
+
+  <details>
+    <summary>📜 La Anunciación (Lucas 1, 26-38)</summary>
+    <div class="accordion-body">
+      <div class="bible-quote">
+        «Al sexto mes, el ángel Gabriel fue enviado por Dios a una ciudad de Galilea llamada Nazaret, a una virgen desposada con un hombre llamado José, de la casa de David; el nombre de la virgen era María.
+
+Entrando donde ella estaba, le dijo: "Alégrate, llena de gracia, el Señor está contigo."
+
+Ella se turbó al oír estas palabras y se preguntaba qué significaría aquel saludo.
+
+El ángel le dijo: "No temas, María, porque has hallado gracia delante de Dios. Concebirás en tu seno y darás a luz un hijo, a quien pondrás por nombre Jesús. Será grande, será llamado Hijo del Altísimo, y el Señor Dios le dará el trono de David, su padre."
+
+María dijo al ángel: "¿Cómo será esto, si no conozco varón?"
+
+El ángel le respondió: "El Espíritu Santo vendrá sobre ti y el poder del Altísimo te cubrirá con su sombra; por eso, el que nacerá será santo y será llamado Hijo de Dios."
+
+María dijo: "He aquí la esclava del Señor; hágase en mí según tu palabra." Y el ángel se retiró.»
+        <span class="bible-ref">— Lucas 1, 26-38</span>
+      </div>
+      <p><strong>Reflexión:</strong> El «sí» de María cambió la historia. Con su «hágase», ella aceptó libremente ser la madre de Dios. Cada vez que decimos «sí» a la voluntad de Dios, participamos de ese mismo acto de fe.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>📜 La Visitación (Lucas 1, 39-45)</summary>
+    <div class="accordion-body">
+      <div class="bible-quote">
+        «En aquellos días, María se levantó y fue con prontitud a la región montañosa, a una ciudad de Judá. Entró en casa de Zacarías y saludó a Isabel.
+
+Cuando Isabel oyó el saludo de María, el niño saltó en su seno, e Isabel, llena del Espíritu Santo, exclamó a gran voz:
+
+"¡Bendita tú entre las mujeres, y bendito el fruto de tu vientre! ¿De dónde a mí que la madre de mi Señor venga a visitarme? Porque en cuanto tu saludo llegó a mis oídos, el niño saltó de gozo en mi seno. ¡Dichosa tú que has creído, porque se cumplirá lo que te fue dicho de parte del Señor!"»
+        <span class="bible-ref">— Lucas 1, 39-45</span>
+      </div>
+      <p><strong>Reflexión:</strong> María no se quedó en casa tras recibir la noticia más grande de la historia. Se puso en camino — peregrinó — para servir a su prima Isabel. El primer acto de María como Madre de Dios fue un acto de servicio y cercanía.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>📜 El Magnificat (Lucas 1, 46-55)</summary>
+    <div class="accordion-body">
+      <div class="bible-quote">
+        «Proclama mi alma la grandeza del Señor,
+se alegra mi espíritu en Dios, mi Salvador,
+porque ha mirado la humildad de su esclava.
+
+Desde ahora me felicitarán todas las generaciones,
+porque el Poderoso ha hecho obras grandes por mí:
+su nombre es santo,
+y su misericordia llega a sus fieles
+de generación en generación.
+
+Él hace proezas con su brazo:
+dispersa a los soberbios de corazón,
+derriba del trono a los poderosos
+y enaltece a los humildes,
+a los hambrientos los colma de bienes
+y a los ricos los despide vacíos.
+
+Auxilia a Israel, su siervo,
+acordándose de la misericordia
+—como lo había prometido a nuestros padres—
+en favor de Abraham y su descendencia por siempre.»
+        <span class="bible-ref">— Lucas 1, 46-55</span>
+      </div>
+      <p><strong>Reflexión:</strong> El Magnificat es el canto de alegría de María. Es un himno revolucionario que anuncia que Dios cambia el orden del mundo: exalta a los humildes, colma a los hambrientos. Es la oración de los pequeños y los sencillos de corazón.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>📜 Las Bodas de Caná (Juan 2, 1-11)</summary>
+    <div class="accordion-body">
+      <div class="bible-quote">
+        «Al tercer día se celebraron unas bodas en Caná de Galilea, y la madre de Jesús estaba allí. También fueron invitados Jesús y sus discípulos.
+
+Faltó el vino, y la madre de Jesús le dijo: "No tienen vino."
+
+Jesús le respondió: "Mujer, ¿qué nos va a ti y a mí? Todavía no ha llegado mi hora."
+
+Su madre dijo a los sirvientes: "Haced lo que Él os diga."
+
+Había allí seis tinajas de piedra. Jesús les dijo: "Llenad las tinajas de agua." Y las llenaron hasta arriba. "Sacad ahora y llevadlo al maestresala." Y se lo llevaron.
+
+Cuando el maestresala probó el agua convertida en vino, llamó al esposo y le dijo: "Todo el mundo sirve primero el vino bueno, pero tú has guardado el bueno hasta ahora."»
+        <span class="bible-ref">— Juan 2, 1-11</span>
+      </div>
+      <p><strong>Reflexión:</strong> María intercede ante Jesús por las necesidades de los demás. No pide para sí misma, sino para otros. Y nos da la instrucción más importante de toda la Escritura: <em>«Haced lo que Él os diga.»</em> Eso es exactamente lo que María nos pide como peregrinos.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>📜 María al pie de la Cruz (Juan 19, 25-27)</summary>
+    <div class="accordion-body">
+      <div class="bible-quote">
+        «Junto a la cruz de Jesús estaban su madre, la hermana de su madre María la de Cleofás, y María Magdalena.
+
+Jesús, viendo a su madre y junto a ella al discípulo a quien amaba, dijo a su madre: "Mujer, ahí tienes a tu hijo."
+
+Luego dijo al discípulo: "Ahí tienes a tu madre."
+
+Y desde aquella hora, el discípulo la recibió en su casa.»
+        <span class="bible-ref">— Juan 19, 25-27</span>
+      </div>
+      <p><strong>Reflexión:</strong> En la cruz, Jesús nos entrega a María como madre. El discípulo amado somos todos nosotros. Desde ese momento, María es madre de toda la Iglesia, madre de cada peregrino que camina hoy hacia su santuario.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>📜 María en Pentecostés (Hechos 1, 14)</summary>
+    <div class="accordion-body">
+      <div class="bible-quote">
+        «Todos ellos perseveraban unánimes en la oración, junto con algunas mujeres, con María, la madre de Jesús, y con los hermanos de Jesús.»
+        <span class="bible-ref">— Hechos 1, 14</span>
+      </div>
+      <p><strong>Reflexión:</strong> María estuvo presente en el nacimiento de la Iglesia. Ella oraba con los apóstoles cuando recibieron el Espíritu Santo. Hoy sigue acompañando a la Iglesia con su oración intercesora.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>📜 La Mujer vestida de sol (Apocalipsis 12, 1)</summary>
+    <div class="accordion-body">
+      <div class="bible-quote">
+        «Apareció en el cielo una gran señal: una mujer vestida del sol, con la luna bajo sus pies y sobre su cabeza una corona de doce estrellas.»
+        <span class="bible-ref">— Apocalipsis 12, 1</span>
+      </div>
+      <p><strong>Reflexión:</strong> La tradición de la Iglesia ve en esta mujer una imagen de María glorificada. Vestida de sol (la gracia de Dios), con la luna bajo sus pies (victoria sobre lo pasajero), coronada de estrellas (las doce tribus de Israel, los doce apóstoles). María reina junto a su Hijo.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>📜 La profecía de Isaías (Isaías 7, 14)</summary>
+    <div class="accordion-body">
+      <div class="bible-quote">
+        «Por tanto, el Señor mismo os dará una señal: He aquí que la virgen concebirá y dará a luz un hijo, y le pondrá por nombre Emmanuel, que significa "Dios con nosotros."»
+        <span class="bible-ref">— Isaías 7, 14</span>
+      </div>
+      <p><strong>Reflexión:</strong> 700 años antes de Cristo, el profeta Isaías anunció que una virgen sería madre del Emmanuel. Esta profecía se cumplió en María. Dios preparó su venida durante siglos, y eligió a una joven humilde de Nazaret para hacerla realidad.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>📜 El Protoevangelio (Génesis 3, 15)</summary>
+    <div class="accordion-body">
+      <div class="bible-quote">
+        «Pondré enemistad entre ti y la mujer, entre tu descendencia y la suya; ella te aplastará la cabeza mientras tú le acecharás el talón.»
+        <span class="bible-ref">— Génesis 3, 15</span>
+      </div>
+      <p><strong>Reflexión:</strong> Esta es la primera promesa de salvación en toda la Biblia, llamada «Protoevangelio» (primer evangelio). La «mujer» y su «descendencia» que vencerán al mal han sido entendidas por la Iglesia como María y Jesús. Desde el principio, Dios tenía un plan, y María estaba en el centro de ese plan.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ═══════════════════════════════════════ DOGMAS MARIANOS ═══════════════════════════════════════ -->
+<section class="section" id="dogmas">
+  <h2 class="section-title"><span class="icon">⭐</span> Los 4 Dogmas Marianos</h2>
+
+  <p>Un <strong>dogma</strong> es una verdad de fe que la Iglesia declara como revelada por Dios y que todos los fieles deben creer. Sobre María, la Iglesia ha proclamado cuatro dogmas a lo largo de su historia.</p>
+
+  <div class="card">
+    <span class="dogma-year">AÑO 431 · CONCILIO DE ÉFESO</span>
+    <div class="card-title">1. María, Madre de Dios (Theotokos)</div>
+    <p>María no es solo madre de un hombre que luego resultó ser Dios. Ella es, desde el primer instante, <strong>Madre de Dios</strong> — porque Jesús es verdadero Dios y verdadero hombre, y María es su madre.</p>
+    <p>La palabra griega <em>Theotokos</em> significa «la que da a luz a Dios». Este fue el primer dogma mariano, proclamado en el Concilio de Éfeso en el año 431.</p>
+    <div class="bible-quote">
+      «¿De dónde a mí que la madre de mi Señor venga a visitarme?»
+      <span class="bible-ref">— Lucas 1, 43</span>
+    </div>
+    <div class="bible-quote">
+      «Cuando llegó la plenitud de los tiempos, Dios envió a su Hijo, nacido de mujer.»
+      <span class="bible-ref">— Gálatas 4, 4</span>
+    </div>
+    <p style="margin-bottom:0"><strong>Analogía sencilla:</strong> Si una mujer da a luz al presidente de un país, es madre del presidente — no solo madre de un bebé que luego llegó a ser presidente. María fue madre de Jesús, que es Dios, desde el primer instante.</p>
+  </div>
+
+  <div class="card">
+    <span class="dogma-year">SIGLO V · AFIRMADO EN VARIOS CONCILIOS</span>
+    <div class="card-title">2. Virginidad Perpetua de María</div>
+    <p>María fue virgen <strong>antes, durante y después</strong> del parto. Es decir, concibió a Jesús por obra del Espíritu Santo sin intervención de varón, y permaneció virgen toda su vida.</p>
+    <p>Este dogma fue afirmado en el Concilio de Constantinopla II (553) y reafirmado en el Concilio de Letrán (649).</p>
+    <div class="bible-quote">
+      «María dijo al ángel: "¿Cómo será esto, si no conozco varón?"»
+      <span class="bible-ref">— Lucas 1, 34</span>
+    </div>
+    <div class="bible-quote">
+      «He aquí que la virgen concebirá y dará a luz un hijo.»
+      <span class="bible-ref">— Isaías 7, 14</span>
+    </div>
+    <p style="margin-bottom:0"><strong>Analogía sencilla:</strong> Así como Dios creó el mundo de la nada, tuvo el poder de hacer que su Hijo naciera de una virgen. La virginidad de María es un signo de que Jesús viene directamente de Dios, no de un plan humano.</p>
+  </div>
+
+  <div class="card">
+    <span class="dogma-year">AÑO 1854 · PAPA PÍO IX</span>
+    <div class="card-title">3. Inmaculada Concepción</div>
+    <p>María fue concebida sin pecado original. Desde el primer instante de su existencia, Dios la preservó de toda mancha de pecado, en previsión de los méritos de Jesucristo.</p>
+    <p>Proclamado por el Papa Pío IX el 8 de diciembre de 1854 mediante la bula <em>Ineffabilis Deus</em>.</p>
+    <div class="bible-quote">
+      «Alégrate, llena de gracia, el Señor está contigo.»
+      <span class="bible-ref">— Lucas 1, 28</span>
+    </div>
+    <div class="bible-quote">
+      «Pondré enemistad entre ti y la mujer, entre tu descendencia y la suya.»
+      <span class="bible-ref">— Génesis 3, 15</span>
+    </div>
+    <p style="margin-bottom:0"><strong>Analogía sencilla:</strong> Imagina que alguien va a caer en un charco de lodo. Puede ser rescatado de dos formas: sacándolo después de caer, o evitando que caiga. Dios nos rescata del pecado original mediante el bautismo (nos saca del lodo), pero a María la preservó desde el inicio (evitó que cayera). Ambas son formas de salvación; la de María fue anticipada.</p>
+  </div>
+
+  <div class="card">
+    <span class="dogma-year">AÑO 1950 · PAPA PÍO XII</span>
+    <div class="card-title">4. Asunción de María</div>
+    <p>Al terminar su vida terrena, María fue llevada en cuerpo y alma a la gloria celestial. No sufrió la corrupción del sepulcro, sino que fue asunta (elevada) al cielo por Dios.</p>
+    <p>Proclamado por el Papa Pío XII el 1 de noviembre de 1950 mediante la constitución apostólica <em>Munificentissimus Deus</em>.</p>
+    <div class="bible-quote">
+      «Apareció en el cielo una gran señal: una mujer vestida del sol, con la luna bajo sus pies y sobre su cabeza una corona de doce estrellas.»
+      <span class="bible-ref">— Apocalipsis 12, 1</span>
+    </div>
+    <p style="margin-bottom:0"><strong>Analogía sencilla:</strong> Si Dios preservó a María del pecado (Inmaculada Concepción), era lógico que también la preservara de la consecuencia del pecado (la corrupción del cuerpo). La Asunción es la consecuencia natural de la Inmaculada Concepción. María ya disfruta lo que todos esperamos al final de los tiempos: la resurrección del cuerpo.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ ORACIONES ═══════════════════════════════════════ -->
+<section class="section" id="oraciones">
+  <h2 class="section-title"><span class="icon">🙏</span> Oraciones</h2>
+
+  <div class="prayer-box">
+    <h3>Ave María</h3>
+    <div class="prayer-text">
+      Dios te salve, María, llena eres de gracia,<br>
+      el Señor es contigo.<br>
+      Bendita tú eres entre todas las mujeres,<br>
+      y bendito es el fruto de tu vientre, Jesús.<br><br>
+      Santa María, Madre de Dios,<br>
+      ruega por nosotros, pecadores,<br>
+      ahora y en la hora de nuestra muerte.<br>
+      Amén.
+    </div>
+  </div>
+
+  <div class="prayer-box">
+    <h3>Salve Regina</h3>
+    <div class="prayer-text">
+      Dios te salve, Reina y Madre de misericordia,<br>
+      vida, dulzura y esperanza nuestra, Dios te salve.<br>
+      A ti llamamos los desterrados hijos de Eva,<br>
+      a ti suspiramos, gimiendo y llorando<br>
+      en este valle de lágrimas.<br><br>
+      Ea, pues, Señora, abogada nuestra,<br>
+      vuelve a nosotros esos tus ojos misericordiosos,<br>
+      y después de este destierro, muéstranos a Jesús,<br>
+      fruto bendito de tu vientre.<br><br>
+      ¡Oh clementísima, oh piadosa,<br>
+      oh dulce Virgen María!<br><br>
+      <span class="prayer-response">V.</span> Ruega por nosotros, Santa Madre de Dios.<br>
+      <span class="prayer-response">R.</span> Para que seamos dignos de alcanzar las promesas de nuestro Señor Jesucristo. Amén.
+    </div>
+  </div>
+
+  <div class="prayer-box">
+    <h3>Memorare (Acordaos)</h3>
+    <div class="prayer-text">
+      Acordaos, oh piadosísima Virgen María,<br>
+      que jamás se ha oído decir<br>
+      que ninguno de los que han acudido a tu protección,<br>
+      implorado tu asistencia<br>
+      y reclamado tu socorro,<br>
+      haya sido desamparado de ti.<br><br>
+      Animado con esta confianza,<br>
+      a ti también acudo, oh Madre, Virgen de las vírgenes;<br>
+      a ti vengo, ante ti me presento pecador y arrepentido.<br><br>
+      No desatiendas mis súplicas,<br>
+      oh Madre del Verbo divino,<br>
+      antes bien, escúchalas y acógelas benignamente.<br>
+      Amén.
+    </div>
+  </div>
+
+  <div class="prayer-box">
+    <h3>Bajo tu amparo</h3>
+    <div class="prayer-text">
+      Bajo tu amparo nos acogemos,<br>
+      santa Madre de Dios;<br>
+      no desprecies las súplicas<br>
+      que te dirigimos en nuestras necesidades;<br>
+      antes bien, líbranos siempre de todo peligro,<br>
+      oh Virgen gloriosa y bendita.<br>
+      Amén.
+    </div>
+  </div>
+
+  <details>
+    <summary>🙏 Oración del Peregrino</summary>
+    <div class="accordion-body">
+      <div class="prayer-text" style="text-align:center">
+        Señor Jesús, que caminaste por los senderos de esta tierra<br>
+        y llamaste a tus discípulos a seguirte,<br>
+        bendice nuestros pasos en esta peregrinación.<br><br>
+        Que cada kilómetro sea una oración,<br>
+        cada cansancio una ofrenda,<br>
+        cada encuentro fraterno un reflejo de tu amor.<br><br>
+        María, Madre del Camino,<br>
+        que fuiste peregrina hacia la casa de Isabel,<br>
+        acompáñanos hoy como acompañaste a tu Hijo.<br><br>
+        Nuestra Señora de la Salud de Bojacá,<br>
+        intercede por nosotros, por nuestras familias,<br>
+        por quienes sufren y por quienes buscan esperanza.<br><br>
+        Que al llegar a tu santuario,<br>
+        nuestros corazones lleguen también a Dios.<br>
+        Amén.
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>🙏 Consagración a la Virgen María</summary>
+    <div class="accordion-body">
+      <div class="prayer-text" style="text-align:center">
+        Oh Señora mía, oh Madre mía,<br>
+        yo me ofrezco enteramente a ti,<br>
+        y en prueba de mi filial afecto<br>
+        te consagro en este día<br>
+        mis ojos, mis oídos, mi lengua, mi corazón;<br>
+        en una palabra, todo mi ser.<br><br>
+        Ya que soy todo tuyo, oh Madre de bondad,<br>
+        guárdame y defiéndeme<br>
+        como cosa y posesión tuya.<br>
+        Amén.
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>📿 Cómo rezar el Santo Rosario</summary>
+    <div class="accordion-body">
+      <p>El Rosario se compone de <strong>5 decenas</strong>, cada una con un Padre Nuestro, 10 Ave Marías y un Gloria al Padre, meditando un misterio de la vida de Jesús y María.</p>
+
+      <p><strong>Misterios según el día:</strong></p>
+      <p><strong>Gozosos</strong> (lunes y sábado): Anunciación · Visitación · Nacimiento de Jesús · Presentación en el Templo · Jesús perdido y hallado en el Templo.</p>
+      <p><strong>Dolorosos</strong> (martes y viernes): Oración en el Huerto · Flagelación · Coronación de espinas · Jesús con la cruz a cuestas · Crucifixión.</p>
+      <p><strong>Gloriosos</strong> (miércoles y domingo): Resurrección · Ascensión · Venida del Espíritu Santo · Asunción de María · Coronación de María.</p>
+      <p><strong>Luminosos</strong> (jueves): Bautismo de Jesús · Bodas de Caná · Proclamación del Reino · Transfiguración · Institución de la Eucaristía.</p>
+
+      <p style="margin-bottom:0"><strong>El 25 de julio de 2026 es sábado</strong>, por lo que corresponden los <strong>Misterios Gozosos</strong>.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>📿 Letanías Lauretanas (selección)</summary>
+    <div class="accordion-body">
+      <div class="prayer-text">
+        Señor, ten piedad. <span class="prayer-response">Señor, ten piedad.</span><br>
+        Cristo, ten piedad. <span class="prayer-response">Cristo, ten piedad.</span><br>
+        Señor, ten piedad. <span class="prayer-response">Señor, ten piedad.</span><br><br>
+        Santa María, <span class="prayer-response">ruega por nosotros.</span><br>
+        Santa Madre de Dios, <span class="prayer-response">ruega por nosotros.</span><br>
+        Santa Virgen de las vírgenes, <span class="prayer-response">ruega por nosotros.</span><br>
+        Madre de Cristo, <span class="prayer-response">ruega por nosotros.</span><br>
+        Madre de la Iglesia, <span class="prayer-response">ruega por nosotros.</span><br>
+        Madre de la misericordia, <span class="prayer-response">ruega por nosotros.</span><br>
+        Madre del buen consejo, <span class="prayer-response">ruega por nosotros.</span><br>
+        Causa de nuestra alegría, <span class="prayer-response">ruega por nosotros.</span><br>
+        Estrella de la mañana, <span class="prayer-response">ruega por nosotros.</span><br>
+        Salud de los enfermos, <span class="prayer-response">ruega por nosotros.</span><br>
+        Refugio de los pecadores, <span class="prayer-response">ruega por nosotros.</span><br>
+        Consoladora de los afligidos, <span class="prayer-response">ruega por nosotros.</span><br>
+        Auxilio de los cristianos, <span class="prayer-response">ruega por nosotros.</span><br>
+        Reina del cielo, <span class="prayer-response">ruega por nosotros.</span><br>
+        Reina de la paz, <span class="prayer-response">ruega por nosotros.</span><br>
+        Reina del Santísimo Rosario, <span class="prayer-response">ruega por nosotros.</span><br>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ═══════════════════════════════════════ CANTOS ═══════════════════════════════════════ -->
+<section class="section" id="cantos">
+  <h2 class="section-title"><span class="icon">🎵</span> Cantos Marianos</h2>
+
+  <p>Cantos tradicionales del repertorio católico latinoamericano para acompañar la peregrinación. Las letras aquí incluidas pertenecen al cancionero litúrgico popular.</p>
+
+  <details>
+    <summary>🎶 Juntos como hermanos</summary>
+    <div class="accordion-body">
+      <div class="song-lyrics"><span class="song-chorus">Juntos como hermanos,
+miembros de una Iglesia,
+vamos caminando
+al encuentro del Señor.</span>
+
+Un largo caminar
+por el desierto bajo el sol,
+no estamos solos,
+Dios camina con su pueblo.
+
+<span class="song-chorus">Juntos como hermanos...</span>
+
+Unidos al rezar,
+unidos en una canción,
+viviremos juntos
+al calor del amor de Dios.
+
+<span class="song-chorus">Juntos como hermanos...</span></div>
+      <p style="margin-top:0.8rem; font-size:0.82rem; color:#888;">Autor: Cesáreo Gabaráin. Uso litúrgico extendido.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>🎶 Santa María del Camino</summary>
+    <div class="accordion-body">
+      <div class="song-lyrics">Mientras recorres la vida,
+tú nunca solo estás;
+contigo por el camino,
+Santa María va.
+
+<span class="song-chorus">Ven con nosotros a caminar,
+Santa María, ven.
+Ven con nosotros a caminar,
+Santa María, ven.</span>
+
+Aunque te digan algunos
+que nada puede cambiar,
+lucha por un mundo nuevo,
+lucha por la verdad.
+
+<span class="song-chorus">Ven con nosotros a caminar...</span>
+
+Si por el mundo los hombres
+destruyen la paz,
+no pierdas la esperanza,
+porque Dios nos da su amor.
+
+<span class="song-chorus">Ven con nosotros a caminar...</span></div>
+      <p style="margin-top:0.8rem; font-size:0.82rem; color:#888;">Autor: Cesáreo Gabaráin. Cancionero litúrgico.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>🎶 Madre del Camino</summary>
+    <div class="accordion-body">
+      <div class="song-lyrics"><span class="song-chorus">Madre del Camino, peregrina de la fe,
+tú nos guías y acompañas, nuestros pasos al andar.
+Madre del Camino, que en Bojacá nos esperas,
+danos salud y esperanza, protégenos con tu amor.</span>
+
+Tú que fuiste la primera peregrina
+cuando fuiste a visitar a Isabel,
+danos fuerza, danos gracia, danos vida,
+para llegar a los pies de tu Señor.
+
+<span class="song-chorus">Madre del Camino...</span></div>
+      <p style="margin-top:0.8rem; font-size:0.82rem; color:#888;">Adaptación libre para la peregrinación.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>🎶 Oh María, Madre mía</summary>
+    <div class="accordion-body">
+      <div class="song-lyrics"><span class="song-chorus">Oh María, Madre mía,
+oh consuelo del mortal,
+amparadme y guiadme
+a la patria celestial.</span>
+
+Con el ángel de María
+las grandezas celebrad,
+transportados de alegría
+sus finezas publicad.
+
+<span class="song-chorus">Oh María, Madre mía...</span>
+
+Quien a María se acoge,
+quien a María invocó,
+no se ha visto en este mundo
+que su auxilio le faltó.
+
+<span class="song-chorus">Oh María, Madre mía...</span></div>
+      <p style="margin-top:0.8rem; font-size:0.82rem; color:#888;">Canto tradicional mariano. Dominio público.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>🎶 Dios te salve, María</summary>
+    <div class="accordion-body">
+      <div class="song-lyrics"><span class="song-chorus">Dios te salve, María,
+llena eres de gracia,
+el Señor es contigo,
+bendita tú eres.</span>
+
+En Nazaret vivías
+cuando el ángel llegó,
+con humildad dijiste:
+"Hágase en mí según tu palabra."
+
+<span class="song-chorus">Dios te salve, María...</span>
+
+Bendito es el fruto
+de tu vientre, Jesús,
+que vino a darnos vida,
+que vino a darnos luz.
+
+<span class="song-chorus">Dios te salve, María...</span></div>
+      <p style="margin-top:0.8rem; font-size:0.82rem; color:#888;">Canto litúrgico popular. Versión del cancionero católico colombiano.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>🎶 El Peregrino de Emaús (Canto de camino)</summary>
+    <div class="accordion-body">
+      <div class="song-lyrics"><span class="song-chorus">Quédate con nosotros, Señor,
+que la tarde está cayendo.
+Quédate con nosotros, Señor,
+y danos tu paz.</span>
+
+Caminando iban dos
+hacia Emaús, sin esperanza;
+un extraño se acercó
+y les abrió la Palabra.
+
+<span class="song-chorus">Quédate con nosotros...</span>
+
+Les ardía el corazón
+al escuchar las Escrituras,
+lo reconocieron al partir el pan:
+era el Señor resucitado.
+
+<span class="song-chorus">Quédate con nosotros...</span></div>
+      <p style="margin-top:0.8rem; font-size:0.82rem; color:#888;">Basado en Lucas 24, 13-35. Versión del cancionero litúrgico.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ═══════════════════════════════════════ DATOS CURIOSOS ═══════════════════════════════════════ -->
+<section class="section" id="datos">
+  <h2 class="section-title"><span class="icon">💡</span> Datos Curiosos</h2>
+
+  <div class="curiosity">
+    <div class="curiosity-title">🏛️ «La Roma Chiquita»</div>
+    <p>Bojacá fue apodada «la Roma Chiquita» por la intensidad de su devoción mariana y la multitud de fieles que visitan el santuario diariamente buscando salud, protección y favores espirituales.</p>
+  </div>
+
+  <div class="curiosity">
+    <div class="curiosity-title">🖼️ Un lienzo que llegó de Granada</div>
+    <p>La imagen venerada es un lienzo (pintura sobre tela) de la Virgen de los Dolores, traído desde Granada (España) por José Pérez, un devoto español que vivía cerca de las piedras de Chivo Negro en Bojacá. Llegó alrededor de 1739 y fue instalada inicialmente en su capilla privada.</p>
+  </div>
+
+  <div class="curiosity">
+    <div class="curiosity-title">🕯️ De capilla familiar a santuario nacional</div>
+    <p>Cuando José Pérez falleció en 1757, la imagen fue transferida a la iglesia parroquial por el padre Francisco de Cárdenas, quien organizó una solemne procesión. Desde entonces, la devoción creció hasta convertir a Bojacá en uno de los centros de peregrinación más importantes de Colombia.</p>
+  </div>
+
+  <div class="curiosity">
+    <div class="curiosity-title">🙌 Exvotos de cera: manos, ojos, piernas</div>
+    <p>Los devotos dejan figuras de cera en forma de manos, ojos, piernas y cuerpos completos como testimonio de los favores recibidos. Esta tradición de «exvotos» viene de la época colonial y sigue viva hasta hoy. Es la forma que tienen los peregrinos de decir: «la Virgen me sanó».</p>
+  </div>
+
+  <div class="curiosity">
+    <div class="curiosity-title">🚗 Bendición de vehículos</div>
+    <p>Una de las tradiciones más populares del santuario es la bendición de vehículos. Miles de conductores llevan sus carros, motos y camiones cada fin de semana para que sean bendecidos frente al templo, pidiendo protección en las carreteras.</p>
+  </div>
+
+  <div class="curiosity">
+    <div class="curiosity-title">📅 Fiesta patronal: segundo domingo de septiembre</div>
+    <p>La fiesta de Nuestra Señora de la Salud de Bojacá se celebra el segundo domingo de septiembre, fecha establecida por el párroco Fray Hilarión García en 1922 por ser la más cercana a la fiesta de los Dolores de María. El lunes siguiente es la fiesta patronal del municipio.</p>
+  </div>
+
+  <div class="curiosity">
+    <div class="curiosity-title">⛪ Los Padres Agustinos</div>
+    <p>El santuario está administrado por los Padres Agustinos desde hace más de un siglo, a través de la Parroquia San Lorenzo Mártir. La orden agustiniana, fundada por San Agustín de Hipona, tiene una larga tradición de devoción mariana.</p>
+  </div>
+
+  <div class="curiosity">
+    <div class="curiosity-title">🌟 Fray Eliseo de Álava y el Hermano Higinio</div>
+    <p>Dos figuras clave en la difusión de la devoción: Fray Eliseo de Álava, quien desde 1946 impulsó la ampliación del santuario; y el Hermano Higinio Hernández (fallecido en 1978), quien recorrió incansablemente Cundinamarca y departamentos vecinos promoviendo la devoción a la Virgen de Bojacá.</p>
+  </div>
+
+  <div class="curiosity">
+    <div class="curiosity-title">💚 Conversiones de 70 años</div>
+    <p>Las crónicas del santuario registran testimonios de personas que habían pasado más de 70 años alejadas de Dios y que, al peregrinar a Bojacá, experimentaron una profunda conversión espiritual. Para muchos, el camino hacia el santuario fue también un camino de vuelta a la fe.</p>
+  </div>
+
+  <div class="curiosity">
+    <div class="curiosity-title">📍 Solo 40 km de Bogotá</div>
+    <p>Bojacá se encuentra a solo 40 kilómetros al occidente de Bogotá, sobre la vía que conduce a Facatativá. El municipio pertenece a la Provincia de Sabana Occidente en Cundinamarca. Su cercanía a la capital lo convierte en uno de los destinos de peregrinación más accesibles del país.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ EL SANTUARIO ═══════════════════════════════════════ -->
+<section class="section" id="santuario">
+  <h2 class="section-title"><span class="icon">⛪</span> El Santuario</h2>
+
+  <div class="card">
+    <div class="card-title">Santuario de Nuestra Señora de la Salud</div>
+    <div class="card-meta">Parroquia San Lorenzo Mártir · Padres Agustinos</div>
+    <p>Ubicado en la plaza central de Bojacá, el santuario exhibe un estilo colonial neogranadino construido entre 1629 y el siglo XVIII, con numerosas intervenciones durante los siglos siguientes.</p>
+    <p><strong>Dirección:</strong> Calle 6 No. 6-37, Bojacá, Cundinamarca</p>
+    <p><strong>Teléfono:</strong> +57 302 226 2370</p>
+    <p><strong>Correo:</strong> santuariodebojaca@gmail.com</p>
+    <p style="margin-bottom:0"><strong>Horario de atención:</strong> Lunes a viernes, 8:00 a.m. a 5:00 p.m.</p>
+  </div>
+
+  <div class="bible-quote">
+    «Vengan a mí todos los que estén cansados y agobiados, y yo les daré descanso.»
+    <span class="bible-ref">— Mateo 11, 28</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+<footer class="footer">
+  <p>🕊️ <strong>Peregrinación a la Virgen de Bojacá 2026</strong></p>
+  <p>«Haced lo que Él os diga» — Juan 2, 5</p>
+  <p style="margin-top:1rem; font-size:0.75rem; opacity:0.7;">Contenido recopilado con fines pastorales y devocionales.<br>
+  Los textos bíblicos siguen la traducción de la Biblia de Jerusalén.<br>
+  Las letras de cantos pertenecen al cancionero litúrgico católico popular.</p>
+</footer>
+
+<a href="#inicio" class="top-btn" aria-label="Volver arriba">↑</a>
+
+</body>
+</html>
